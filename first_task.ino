@@ -3,11 +3,11 @@ const int NUMBER_OF_PINS = 5;
 unsigned long* prevMicrosArr = new unsigned long[NUMBER_OF_PINS];
 unsigned long* intervalsArr = new unsigned long[NUMBER_OF_PINS];
 int* ledStates = new int[NUMBER_OF_PINS];
-int pins[NUMBER_OF_PINS] = {3, 5, 6, 9, 10};
+int pins[NUMBER_OF_PINS] = {3, 6, 9, 10, 11};
 
 void setup() {
   for (int i = 0; i < NUMBER_OF_PINS; ++i) {
-    microsArr[i] = 0;
+    prevMicrosArr[i] = 0;
     ledStates[i] = LOW;
     pinMode(pins[i], OUTPUT);
   }
@@ -15,8 +15,8 @@ void setup() {
   intervalsArr[0] = 10000;
   intervalsArr[1] = 1000;
   intervalsArr[2] = 500;
-  intervalsArr[3] = 100;
-  intervalsArr[4] = 50;
+  intervalsArr[3] = 94;
+  intervalsArr[4] = 42;
 }
 
 void loop() {
